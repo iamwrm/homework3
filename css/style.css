@@ -67,29 +67,42 @@ table {
 }
 
 .rowhead {
-  border: 2px solid black;
+  border-top: 2px solid black;
 }
 
 td {
   padding: 15px;
   padding-top: 2px;
+  border-top: 2px solid black;
 }
 
-tr:nth-child(odd) {
+tbody tr:nth-child(odd) {
   background-color: #D1D1D1;
 }
 
-tr:nth-child(even) {
+tbody tr:nth-child(even) {
   background-color: transparent;
 }
 
-tr:hover {
-  background-color: rgba(126, 8, 32, .5)
-}
 
 * {}
 
-thead tr:first-child th:first-child {}
+table {
+  border-collapse: separate;
+  border-radius: 15px;
+}
+
+thead tr:first-child th:first-child {
+  border-top-left-radius: 15px;
+}
+
+thead tr:first-child th:last-child {
+  border-top-right-radius: 15px;
+}
+
+tbody tr:hover {
+  background-color: rgba(126, 8, 32, .5)
+}
 
 footer {
   position: fixed;
